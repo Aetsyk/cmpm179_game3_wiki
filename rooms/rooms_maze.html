@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maze Rooms - Game Wiki</title>
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+    </head>
+    <body>
+        <header>
+            <a href="../index.html">
+                <h3>Game Wiki</h3>
+            </a>
+        </header>
+
+        <section id="content">
+            <div id="tableofcontents" class="sidebar">
+                <div class="sub-section">
+                    <h3>Contents</h3>
+                    <hr>
+                    <p>Main</p>
+                    <p>Finding the Player's Location</p>
+                    <p>Navigating Maze Rooms</p>
+                    <p>See Also</p>
+                </div>
+            </div>
+
+            <div id="main">
+                <div class="sub-section">
+                    <h1>Maze Rooms</h1><hr>
+
+                    <div>
+                        <p>Maze Rooms are mazes with various traps. There are three maze layouts in total, each with
+                            three possible spawn points and a single exit. Taking the wrong path can lead to triggering a trap.
+                        </p>
+                    </div>
+                    <br>
+                    <div>
+                        <h3>Finding the Player's Location</h3><hr>
+
+                        <p>Figuring out which maze the player is in can be done using the geometry of the starting position.</p>
+                        <br>
+
+                        <h4>Spawn Point with Multiple Paths</h4>
+                        <p>If there are multiple directions to move in on spawn, then the player can only be in Maze 1. If they
+                            spawn in the middle of a hall with a visible dead end on one side, then they are at Spawn 1. If There
+                            are three visible paths, then they are at Spawn 2.
+                        </p>
+                        <br>
+                        <h4>Spawn Point with a Single Path that Curves Left</h4>
+                        <p>If there is only one path to take and it curves left, the player is either in Maze 2 or Maze 3. If the
+                            path immediately curves left and then right, then the player is in Maze 2 Spawn 3. If they have to turn
+                            180 degrees at the curve, they are at one of the other spawn points. If they have to turn left again, they
+                            are in Maze 2 Spawn 1. Otherwise, the player is in Maze 3, and they need to move to the first split to
+                            know which spawn they started at. This split will have a path forward and a path to the right. If the path
+                            forward curves to the right, they started at Spawn 1. If it curves to the left, they started at Spawn 2.
+                        </p>
+                        <br>
+                        <h4>Spawn Point with a Single Path that Curves Right</h4>
+                        <p>If there is one path that curves right, the player could be in any maze, but each maze only has one
+                            spawn point that matches this description. If there is a left turn after the first right, then the player
+                            is in Maze 1 Spawn 3. If there is a split after the first right, the player is in Maze 2 Spawn 2. If the
+                            first right is a 180 degree turn leading to a left, the player is in Maze 3 Spawn 3.
+                        </p>
+                    </div>
+                    <br>
+                    <div>
+                        <h3>Navigating Maze Rooms</h3><hr>
+
+                        <p>Finding the exit in a Maze Room involves a lot of trial and error. When the exact spawn point in the maze
+                            is known, finding the exit is much easier. The following guides can be used to find the exit.</p>
+                        
+                        <br>
+                        <h4>Maze 1, Spawn 1</h4>
+                        <ol>
+                            <li>Proceed to first split and turn right</li>
+                            <li>At next split, go left, then immediately turn right</li>
+                            <li>Take next path on the right</li>
+                            <li>At next split, go forward</li>
+                            <li>Continue to exit</li>
+                        </ol>
+                        <br>
+                        <h4>Maze 1, Spawn 2</h4>
+                        <ol>
+                            <li>Face the wall with no path</li>
+                            <li>Go to the left</li>
+                            <li>At next split, take the first path on the left</li>
+                            <li>Take next path on the right</li>
+                            <li>At next split, go forward</li>
+                            <li>Continue to exit</li>
+                        </ol>
+                        <br>
+                        <h4>Maze 1, Spawn 3</h4>
+                        <ol>
+                            <li>Proceed to first split and turn right</li>
+                            <li>At next split, go right, then right again</li>
+                            <li>Take next path on the right</li>
+                            <li>At next split, go forward</li>
+                            <li>Continue to exit</li>
+                        </ol>
+                        <br>
+                        <h4>Maze 2, Spawn 1</h4>
+                        <ol>
+                            <li>Proceed to first split and take the first left</li>
+                            <li>At next split, take the first right</li>
+                            <li>Then, at the next split, Take the farthest left from where you are</li>
+                            <li>Continue to exit</li>
+                        </ol>
+                        <br>
+                        <h4>Maze 2, Spawn 2</h4>
+                        <ol>
+                            <li>Proceed to first split and take the first right</li>
+                            <li>At next split, take the first right</li>
+                            <li>Then, at the next split, Take the farthest left from where you are</li>
+                            <li>Continue to exit</li>
+                        </ol>
+                        <br>
+                        <h4>Maze 2, Spawn 3</h4>
+                        <ol>
+                            <li>Proceed to first split and turn left</li>
+                            <li>At next split, turn left, then left again at the next split</li>
+                            <li>Then, at the next split, Take the farthest left from where you are</li>
+                            <li>Continue to exit</li>
+                        </ol>
+                        <br>
+                        <h4>Maze 3, Spawn 1</h4>
+                        <ol>
+                            <li>Proceed to first split and turn right</li>
+                            <li>At next split, turn right</li>
+                            <li>Then, take the next left</li>
+                            <li>Continue to exit</li>
+                        </ol>
+                        <br>
+                        <h4>Maze 3, Spawn 2</h4>
+                        <ol>
+                            <li>Proceed to first split and turn right</li>
+                            <li>At next split, turn left</li>
+                            <li>Then, at next split, turn right</li>
+                            <li>Then, take the next left</li>
+                            <li>Continue to exit</li>
+                        </ol>
+                        <br>
+                        <h4>Maze 3, Spawn 3</h4>
+                        <ol>
+                            <li>Proceed to first split and take the leftmost path</li>
+                            <li>At next split, turn left, then left again at the next split</li>
+                            <li>Then, at next split, turn right</li>
+                            <li>Then, take the next left</li>
+                            <li>Continue to exit</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <nav id="seealso" class="sub-section">
+                    <h3>See also</h3><hr>
+                    <ul>
+                        <li><a href="rooms_puzzle.html">Puzzle Rooms</a></li>
+                        <li><a href="rooms_platform.html">Platform Rooms</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="images" class="sidebar">
+                <div class="sub-section">
+                    <img src="../img/Game3_MazeScreenshot.png" alt="A split path in one of the mazes">
+                    <p>A split path in one of the mazes</p>
+                </div>
+                
+                <div class="sub-section">
+                    <img src="../img/Game3_MazeEndScreenshot.png" alt="The exit">
+                    <p>The exit</p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

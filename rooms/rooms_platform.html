@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Platform Rooms - Game Wiki</title>
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+    </head>
+    <body>
+        <header>
+            <a href="../index.html">
+                <h3>Game Wiki</h3>
+            </a>
+        </header>
+        
+        <section id="content">
+            <div id="tableofcontents" class="sidebar">
+                <div class="sub-section">
+                    <h3>Contents</h3>
+                    <hr>
+                    <p>Main</p>
+                    <p>Color Platforms</p>
+                    <p>Moving Platforms</p>
+                    <p>Timer Platforms</p>
+                    <p>Invisible Platforms</p>
+                    <p>Code Platforms</p>
+                    <p>See Also</p>
+                </div>
+            </div>
+
+            <div id="main">
+                <div class="sub-section">
+                    <h1>Platform Rooms</h1><hr>
+
+                    <div>
+                        <p>Platform Rooms are short platfroming challenges where the player must find the correct platforms
+                            to jump to. The challenge comes from the myriad of fake and invisible platforms intended to mess
+                            with the player.
+                        </p>
+                    </div>
+                    <br>
+                    <div>
+                        <h3>Color Platforms</h3><hr>
+
+                        <p>Color platforms come in sets of two, with the first set consisting of primary colors and the second set
+                            secondary colors. Only one platform in each set can be stood on. The corporeal platform in the first set
+                            is based on the order of the colors from left to right:</p>
+                        <ul>
+                            <li>Red, Blue, Yellow: red</li>
+                            <li>Blue, Yellow, Red: yellow</li>
+                            <li>Yellow, Red, Blue: blue</li>
+                        </ul>
+                        <p>
+                            The correct platform for the second set is the combination of the colors of the two incorrect platforms
+                            from the first set.
+                        </p>
+                    </div>
+                    <br>
+                    <div>
+                        <h3>Moving Platforms</h3><hr>
+
+                        <p>Moving platforms can only be stood on while they're moving a certain direction. This direction is based on
+                            the correct platform from the first set of color platforms.
+                        </p>
+                        <ul>
+                            <li>Red: towards the right</li>
+                            <li>Blue: towards the left</li>
+                            <li>Yellow: towards the right</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div>
+                        <h3>Timer Platforms</h3><hr>
+
+                        <p>Timer platforms are white platforms that span the width of the room and disappear a certain amount of
+                            time after the player first touches them. There are two in each room. The amount of time each one takes
+                            to disappear depends on the order of the first set of color platforms.
+                        </p>
+                        <ul>
+                            <li>Red, Blue, Yellow: the first platform takes 6 seconds, and the second takes 2 seconds</li>
+                            <li>Blue, Yellow, Red: the first platform takes 5 seconds, and the second takes 4 seconds</li>
+                            <li>Yellow, Red, Blue: the first platform takes 6 seconds, and the second takes 4 seconds</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div>
+                        <h3>Invisible Platforms</h3><hr>
+
+                        <p>An invisible platform is present if there appears to be large gap between platforms that can't be crossed
+                            with a jump. The location of this platform is based on the location of the corporeal color platform from
+                            the first set. If the color platform was in the middle of the room, then the invisible platform is also
+                            in the middle. Otherwise, it is on the opposite side of the room.
+                        </p>
+                    </div>
+                    <br>
+                    <div>
+                        <h3>Code Platforms</h3><hr>
+
+                        <p>Code platforms are long gray platforms that appear at the end of platform rooms. They are identical in every
+                            way, but only one can be stood on. The correct platform can be determined by subtracting the duration of
+                            the second timer platform from the first. The result is equal to the number of platforms away from the wall
+                            the correct platform is. Count in the direction that the moving platform moves while corporeal.
+                        </p>
+                    </div>
+                </div>
+
+                <nav id="seealso" class="sub-section">
+                    <h3>See also</h3><hr>
+                    <ul>
+                        <li><a href="rooms_maze.html">Maze Rooms</a></li>
+                        <li><a href="rooms_puzzle.html">Puzzle Rooms</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="images" class="sidebar">
+                <div class="sub-section">
+                    <img src="../img/Game3_PlatformerScreenshot.png" alt="The layout of a Platform Room">
+                    <p>The layout of a Platform Room</p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
